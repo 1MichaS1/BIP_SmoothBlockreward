@@ -1,2 +1,2 @@
-# smooth_blockreward
-Smoothly decaying Bitcoin block reward without disruptions
+# Smooth Blockreward
+Smoothly decaying Bitcoin block reward without disruptions.
