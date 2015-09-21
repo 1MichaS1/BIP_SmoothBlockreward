@@ -1,0 +1,23 @@
+<pre>
+  BIP: SBR (not assigned a BIP number yet)
+  Title: Smooth Block Reward Decay without Disruption
+  Author: Michael_S user of bitcointalk.org
+  Discussions-To: t.b.d.
+  Status: Draft
+  Type: Standards Track
+  Created: 2015-09-22
+</pre>
+
+;Copyright notice:
+: This document is placed in the public domain
+
+==Abstract==
+
+From a certain point on (ca. 2 years (105,000 blocks) after block reward has halved to 6.25 BTC) the block reward reduces continuously in very fine steps instead of halving every 210,000 blocks.
+
+This avoids future disruption of the Bitcoin system.
+
+This BIP is designed such that the new smooth block reward schedule follows the original halving schedule very closely, and such that the final amount of bitcoins in circulation is exactly (down to the last satoshi) the same as in the original schedule, namely 20,999,999.97690000 BTC.
+
+==Specification==
+...coming soon...
