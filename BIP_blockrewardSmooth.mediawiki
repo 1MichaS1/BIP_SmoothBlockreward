@@ -27,7 +27,7 @@ Starting with this block, block reward is decreased in small steps, as follows:
 
 * Define the constant factor d = (2^32-20355337)/2^32 = 4,274,611,959 / 4,294,967,296 = 0.99526065378449857234954833984375 
 
-* starting with block height 735,001 block reward gets reduced by multiplication with d, and is then kept constant for 1500 blocks. After that, the next reduction occurs.
+* Starting with block height 735,001 block reward gets reduced by multiplication with d, and is then kept constant for 1500 blocks. After that, the next reduction occurs.
 
 * After multiplication of the old BR with d, the result is rounded to full satoshis. This yields the new BR. Rounding is done either upwards or downwards according to the following cyclical schedule:
 
