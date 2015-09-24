@@ -20,4 +20,25 @@ This avoids future disruption of the Bitcoin system.
 This BIP is designed such that the new smooth block reward schedule follows the original halving schedule very closely, and such that the final amount of bitcoins in circulation is exactly (down to the last satoshi) the same as in the original schedule, namely 20,999,999.97690000 BTC.
 
 ==Specification==
-...coming soon...
+
+The Block Reward (BR) schedule is smooothened starting with block height 735,001. This is the 105,001-st block that has BR=6.25 BTC acc. to the classical Bitcoin block reward schedule.
+
+Starting with this block, block reward is decreased in small steps, as follows:
+
+* Define the constant factor d = (2^32-20355337)/2^32 = 4,274,611,959 / 4,294,967,296 = 0.99526065378449857234954833984375 
+
+* starting with block height 735,001 block reward gets reduced by multiplication with d, and is then kept constant for 1500 blocks. After that, the next reduction occurs.
+
+* After multiplication of the old BR with d, the result is rounded to full satoshis. This yields the new BR. Rounding is done either upwards or downwards according to the following cyclical schedule:
+
+** down, up, up, up, up, down, up, up, up, up, down, up, up, up, up, down, up, up, up, up, ... (every 1500 blocks)
+
+* All variables are double precision with more than 50 bits mantissa, to avoid any loss of accuracy.
+
+* According to this schedule, the last BR is equal to 1 satoshi at block height = 7,102,500.
+
+After that, the total number of bitcoins mined is still 1,440,000 satoshis short of 20,999,999.97690000 BTC, which is the total amount of bitcoins mined acc. to the old emissionm schedule. To achieve total parity in terms of the total nb. of bitcoins mined, this proposal defines:
+
+* The BR is kept at BR = 1 satoshi for another 1,440,000 blocks, i.e. for blocks 7,102,501..8,547,000.
+
+* For blocks >= 8,547,001, the BR is set to 0.00000000 BTC.
