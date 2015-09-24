@@ -47,7 +47,7 @@ After that, the total number of bitcoins mined is still 1,440,000 satoshis short
 
 The original emission schedule is kept quite accurately, see diagram:
 
-<insert graphic(s) here>
++ + + insert graphic(s) here + + +
 
 For comparison:
 
