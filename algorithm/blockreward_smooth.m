@@ -29,16 +29,16 @@
 % ...
 % ...(always once round down and 4 times round up to full satoshis, and then repeat)...
 % ...
-% BR =  0.00000220 BTC for   1,500 blocks (blocks x,xxx,xxx..x,xxx,xxx) --> times d, round down: -->
+% BR =  0.00000220 BTC for   1,500 blocks (blocks 5,518,501..5,520,000) --> times d, round down: -->
 % BR =  0.00000218 BTC for   1,500 blocks (blocks x,xxx,xxx..x,xxx,xxx) --> times d, round up:   -->
 % BR =  0.00000217 BTC for   1,500 blocks (blocks x,xxx,xxx..x,xxx,xxx) --> times d, round up:   -->
 % BR =  0.00000216 BTC for   1,500 blocks (blocks x,xxx,xxx..x,xxx,xxx) --> times d, round up:   -->
 % BR =  0.00000215 BTC for   1,500 blocks (blocks x,xxx,xxx..x,xxx,xxx) --> times d, round up:   -->
 % BR =  0.00000214 BTC for   1,500 blocks (blocks x,xxx,xxx..x,xxx,xxx) --> times d, round down: -->
-% BR =  0.00000212 BTC for   1,500 blocks (blocks x,xxx,xxx..x,xxx,xxx) --> times d, round up:   -->
-% BR =  0.00000211 BTC for   1,500 blocks (blocks x,xxx,xxx..x,xxx,xxx) --> times d, round up:   -->
-% BR =  0.00000210 BTC for   4,500 blocks (blocks x,xxx,xxx..x,xxx,xxx) --> times d, round down: -->
-% BR =  0.00000209 BTC for   7,500 blocks (blocks x,xxx,xxx..x,xxx,xxx) --> times d, round down: -->
+% BR =  0.00000212 BTC for   1,500 blocks (blocks x,xxx,xxx..5,529,000) --> times d, round up:   -->
+% BR =  0.00000211 BTC for   1,500 blocks (blocks 5,529,001..5,530,500) --> times d, round up:   -->
+% BR =  0.00000210 BTC for   4,500 blocks (blocks 5,530,501..5,535,000) --> times d, round down: -->
+% BR =  0.00000209 BTC for   7,500 blocks (blocks 5,535,001..5,542,500) --> times d, round down: -->
 % BR =  0.00000208 BTC for   7,500 blocks (blocks x,xxx,xxx..x,xxx,xxx) --> times d, round down: -->
 % BR =  0.00000207 BTC for   7,500 blocks (blocks x,xxx,xxx..x,xxx,xxx) --> times d, round down: -->
 % BR =  0.00000206 BTC for   7,500 blocks (blocks x,xxx,xxx..x,xxx,xxx) --> times d, round down: -->
