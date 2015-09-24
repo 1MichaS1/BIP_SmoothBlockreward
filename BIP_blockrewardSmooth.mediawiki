@@ -43,6 +43,11 @@ After that, the total number of bitcoins mined is still 1,440,000 satoshis short
 
 * For blocks >= 8,547,001, the BR is set to 0.00000000 BTC.
 
+The algorithm is also programmed here:
+
+https://github.com/1MichaS1/BIP_SmoothBlockreward/blob/master/algorithm/blockreward_smooth.m
+
+
 ==Rationale==
 
 The original emission schedule is kept quite accurately, see diagram:
