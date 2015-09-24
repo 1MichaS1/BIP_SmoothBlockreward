@@ -29,20 +29,20 @@
 % ...
 % ...(always once round down and 4 times round up to full satoshis, and then repeat)...
 % ...
-% BR =  0.00000220 BTC for   1,500 blocks (blocks 7,072,501..7,080,000) --> times d, round down: -->
-% BR =  0.00000218 BTC for   1,500 blocks (blocks 7,072,501..7,080,000) --> times d, round up:   -->
-% BR =  0.00000217 BTC for   1,500 blocks (blocks 7,072,501..7,080,000) --> times d, round up:   -->
-% BR =  0.00000216 BTC for   1,500 blocks (blocks 7,072,501..7,080,000) --> times d, round up:   -->
-% BR =  0.00000215 BTC for   1,500 blocks (blocks 7,072,501..7,080,000) --> times d, round up:   -->
-% BR =  0.00000214 BTC for   1,500 blocks (blocks 7,072,501..7,080,000) --> times d, round down: -->
-% BR =  0.00000212 BTC for   1,500 blocks (blocks 7,072,501..7,080,000) --> times d, round up:   -->
-% BR =  0.00000211 BTC for   1,500 blocks (blocks 7,072,501..7,080,000) --> times d, round up:   -->
-% BR =  0.00000210 BTC for   4,500 blocks (blocks 7,072,501..7,080,000) --> times d, round down: -->
-% BR =  0.00000209 BTC for   7,500 blocks (blocks 7,072,501..7,080,000) --> times d, round down: -->
-% BR =  0.00000208 BTC for   7,500 blocks (blocks 7,072,501..7,080,000) --> times d, round down: -->
-% BR =  0.00000207 BTC for   7,500 blocks (blocks 7,072,501..7,080,000) --> times d, round down: -->
-% BR =  0.00000206 BTC for   7,500 blocks (blocks 7,072,501..7,080,000) --> times d, round down: -->
-% BR =  0.00000205 BTC for   7,500 blocks (blocks 7,072,501..7,080,000) --> times d, round down: -->
+% BR =  0.00000220 BTC for   1,500 blocks (blocks x,xxx,xxx..x,xxx,xxx) --> times d, round down: -->
+% BR =  0.00000218 BTC for   1,500 blocks (blocks x,xxx,xxx..x,xxx,xxx) --> times d, round up:   -->
+% BR =  0.00000217 BTC for   1,500 blocks (blocks x,xxx,xxx..x,xxx,xxx) --> times d, round up:   -->
+% BR =  0.00000216 BTC for   1,500 blocks (blocks x,xxx,xxx..x,xxx,xxx) --> times d, round up:   -->
+% BR =  0.00000215 BTC for   1,500 blocks (blocks x,xxx,xxx..x,xxx,xxx) --> times d, round up:   -->
+% BR =  0.00000214 BTC for   1,500 blocks (blocks x,xxx,xxx..x,xxx,xxx) --> times d, round down: -->
+% BR =  0.00000212 BTC for   1,500 blocks (blocks x,xxx,xxx..x,xxx,xxx) --> times d, round up:   -->
+% BR =  0.00000211 BTC for   1,500 blocks (blocks x,xxx,xxx..x,xxx,xxx) --> times d, round up:   -->
+% BR =  0.00000210 BTC for   4,500 blocks (blocks x,xxx,xxx..x,xxx,xxx) --> times d, round down: -->
+% BR =  0.00000209 BTC for   7,500 blocks (blocks x,xxx,xxx..x,xxx,xxx) --> times d, round down: -->
+% BR =  0.00000208 BTC for   7,500 blocks (blocks x,xxx,xxx..x,xxx,xxx) --> times d, round down: -->
+% BR =  0.00000207 BTC for   7,500 blocks (blocks x,xxx,xxx..x,xxx,xxx) --> times d, round down: -->
+% BR =  0.00000206 BTC for   7,500 blocks (blocks x,xxx,xxx..x,xxx,xxx) --> times d, round down: -->
+% BR =  0.00000205 BTC for   7,500 blocks (blocks 5,565,001..5,572,500) --> times d, round down: -->
 % ...
 % BR =  0.00000004 BTC for   7,500 blocks (blocks 7,072,501..7,080,000) --> times d, round down: -->
 % BR =  0.00000003 BTC for   7,500 blocks (blocks 7,080,001..7,087,501) --> times d, round down: -->
@@ -74,14 +74,13 @@ d = (2^32-20355337)/2^32;% factor of continuous reduction -> 0.01444500 BTC less
 lut_mod=[2:1:decrease_every, 1];% e.g. [2, 3, 4, 1]
 lut_mod_cycl=[2:1:5 , 1];% e.g. [2, 3, 4, 5, 1] (round down in 1 of 5 cases)
 
+% Adaptation, to have exactly 20,999,999.9769 BTC at the end:
 mine_min = 1;% satoshis to mine minimum
 mine_rest = 0;% satoshis to mine once at block height==mine_rest_when
 mine_rest_when = 8547001;%block height
 
-%               --
-%               --
 
-Nsim = 34;%[33] nb of "delta_t blocks" intervals to simulate
+Nsim = 35;%[33] nb of "delta_t blocks" intervals to simulate
 
 % --------------------------------------------------------------------------------------------------
 
