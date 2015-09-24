@@ -35,7 +35,7 @@ Starting with this block, block reward is decreased in small steps, as follows:
 
 * All variables are double precision with more than 50 bits mantissa, to avoid any loss of accuracy.
 
-* According to this schedule, the last BR is equal to 1 satoshi at block height = 7,102,500.
+* According to this schedule, the last BR is equal to 1 satoshi at block heights 7,095,001 to 7,102,500.
 
 After that, the total number of bitcoins mined is still 1,440,000 satoshis short of 20,999,999.97690000 BTC, which is the total amount of bitcoins mined acc. to the old emission schedule. To achieve total parity in terms of the total nb. of bitcoins mined, this proposal defines:
 
