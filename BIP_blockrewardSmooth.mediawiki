@@ -42,3 +42,15 @@ After that, the total number of bitcoins mined is still 1,440,000 satoshis short
 * The BR is kept at BR = 1 satoshi for another 1,440,000 blocks, i.e. for blocks 7,102,501..8,547,000.
 
 * For blocks >= 8,547,001, the BR is set to 0.00000000 BTC.
+
+==Rationale==
+
+The original emission schedule is kept quite accurately, see diagram:
+
+<insert graphic(s) here>
+
+For comparison:
+
+* With old block reward schedule, the last satoshi is mined at block height 6,930,000, which is ca. 131.7 years after inception, when assuming on average 10 minutes block time.
+
+* With the new proposal, the end of the "regular" schedule is reached at block height 7,102,500, which is about 135 years after inception. The remaining 0,01440000 BTC are emitted as 1 satoshi per block until block height 8,547,000, which occurs ca. 162.5 years after inception.
