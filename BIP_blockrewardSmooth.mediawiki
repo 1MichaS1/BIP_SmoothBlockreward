@@ -19,6 +19,16 @@ This avoids future disruption of the Bitcoin system.
 
 This BIP is designed such that the new smooth block reward schedule follows the original halving schedule very closely, and such that the final amount of bitcoins in circulation is exactly (down to the last satoshi) the same as in the original schedule, namely 20,999,999.97690000 BTC.
 
+==Motivation==
+
+# Avoid future disruptive shocks of block reward halvings every 4 years, posing a risk to Bitcoin system stability in the future
+
+# Keep block reward schedule very close to the original schedule
+
+# Keep the total number of bitcoins ever created at 20,999,999.9769000.
+
+# Provide a simple algorithm that can be written in few lines of code.
+
 ==Specification==
 
 The Block Reward (BR) schedule is smooothened starting with block height 735,001. This is the 105,001-st block that has BR=6.25 BTC acc. to the classical Bitcoin block reward schedule.
@@ -50,12 +60,44 @@ https://github.com/1MichaS1/BIP_SmoothBlockreward/blob/master/algorithm/blockrew
 
 ==Rationale==
 
-The original emission schedule is kept quite accurately, see diagram:
+The original emission schedule is kept quite accurately, see ilustrative diagrams in the annex.
 
-+ + + insert graphic(s) here + + +
+The formulas are simple, require little amount of code lines.
 
-For comparison:
+Comparison of emission schedules:
 
 * With old block reward schedule, the last satoshi is mined at block height 6,930,000, which is ca. 131.7 years after inception, when assuming on average 10 minutes block time.
 
 * With the new proposal, the end of the "regular" schedule is reached at block height 7,102,500, which is about 135 years after inception. The remaining 0,01440000 BTC are emitted as 1 satoshi per block until block height 8,547,000, which occurs ca. 162.5 years after inception.
+
+
+==Deployment==
+
+* Deploy the new code well in advance. There is sufficient time, since the change will only take effect at block height 735,001 around the year 2021..2022. The new code will be identical to the legacy code until and including block height 735,000.
+
+* At block height 735,001, the mining reward will the first time deviate from the original schedule. For this block 735,001 block reward will be 6.22037908 BTC instead of 6.25 BTC. The software will reject blocks with mining rewards acc. to the old emission schedule, i.e. blocks assinging the miner a reward of more than 6.22037908 BTC will be rejected.
+
+
+==Backward compatibility==
+
+All older clients are not compatible with this change starting with block height 735,001 (around year 2021..2022). Before that, there is full downward compatibility.
+
+SPV wallets are not affected and require no change or update. 
+
+
+==Annex - Illustrations==
+
+Block reward vs. time:
+
+<img src=https://cloud.githubusercontent.com/assets/14133304/10089640/7f29715c-6326-11e5-9924-9ccd9b232fd9.png></img>
+
+<img src=https://cloud.githubusercontent.com/assets/14133304/10089644/825b2050-6326-11e5-8ace-a780fdd1f7a8.png></img>
+
+Total amount of mined bitcoins over time:
+<img src=https://cloud.githubusercontent.com/assets/14133304/10089647/8498e348-6326-11e5-9577-09ad855f6564.png></img>
+
+<img src=https://cloud.githubusercontent.com/assets/14133304/10089649/8737560c-6326-11e5-957e-9693c858cd9a.png></img>
+
+<img src=https://cloud.githubusercontent.com/assets/14133304/10089650/89c3f704-6326-11e5-95c2-c10fb108bb17.png></img>
+
+<img src=https://cloud.githubusercontent.com/assets/14133304/10089654/8e8b1d44-6326-11e5-8bd9-35017b762bf0.png></img>
