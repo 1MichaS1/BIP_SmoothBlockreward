@@ -75,7 +75,7 @@ Comparison of emission schedules:
 
 * Deploy the new code well in advance. There is sufficient time, since the change will only take effect at block height 735,001 around the year 2021..2022. The new code will be identical to the legacy code until and including block height 735,000.
 
-* At block height 735,001, the mining reward will the first time deviate from the original schedule. For this block 735,001 block reward will be 6.22037908 BTC instead of 6.25 BTC. The software will reject blocks with mining rewards acc. to the old emission schedule, i.e. blocks assinging the miner a reward of more than 6.22037908 BTC will be rejected.
+* At block height 735,001, the mining reward will the first time deviate from the original schedule. For this block 735,001 block reward will be 6.22037908 BTC instead of 6.25 BTC. The software will reject blocks with mining rewards acc. to the old emission schedule, i.e. blocks assigning the miner a reward of more than 6.22037908 BTC will be rejected.
 
 
 ==Backward compatibility==
